@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="calculator-container">
+      <div class="calculator">
+        <div class="display-container">
+          <input type="text" id="display" placeholder="0" readonly />
+        </div>
+        <div class="buttons">
+          <!-- Üst Satır - Temizleme ve Temel İşlemler -->
+          <button class="operator" onclick="Clear()">C</button>
+          <button class="operator" onclick="del()">Del</button>
+          <button class="operator" onclick="display('%')">%</button>
+          <button class="operator" onclick="display('/')">/</button>
+
+          <!-- İkinci Satır - Sayılar ve Çarpma -->
+          <button onclick="display('7')">7</button>
+          <button onclick="display('8')">8</button>
+          <button onclick="display('9')">9</button>
+          <button class="operator" onclick="display('*')">*</button>
+
+          <!-- Üçüncü Satır - Sayılar ve Çıkarma -->
+          <button onclick="display('4')">4</button>
+          <button onclick="display('5')">5</button>
+          <button onclick="display('6')">6</button>
+          <button class="operator" onclick="display('-')">-</button>
+
+          <!-- Dördüncü Satır - Sayılar ve Toplama -->
+          <button onclick="display('1')">1</button>
+          <button onclick="display('2')">2</button>
+          <button onclick="display('3')">3</button>
+          <button class="operator" onclick="display('+')">+</button>
+
+          <!-- Beşinci Satır - Sıfır, Nokta, Eşittir -->
+          <button onclick="display('0')">0</button>
+          <button onclick="display('.')">.</button>
+          <button onclick="toggleSign()">+/-</button>
+          <button class="operator equal" onclick="Calculate()">=</button>
+
+          <!-- Altıncı Satır - İleri Matematiksel İşlevler -->
+          <button class="function" onclick="Square()">x²</button>
+          <button class="function" onclick="SquareRoot()">√</button>
+          <button class="function" onclick="Cube()">x³</button>
+          <button class="function" onclick="CubeRoot()">∛</button>
+
+          <!-- Yedinci Satır - Logaritmik ve Üstel İşlevler -->
+          <button class="function" onclick="Log()">log</button>
+          <button class="function" onclick="Ln()">ln</button>
+          <button class="function" onclick="Exp()">exp</button>
+          <button class="function" onclick="Factorial()">n!</button>
+
+          <!-- Sekizinci Satır - Trigonometrik İşlevler -->
+          <button class="function" onclick="Sin()">sin</button>
+          <button class="function" onclick="Cos()">cos</button>
+          <button class="function" onclick="Tan()">tan</button>
+          <button class="function" onclick="inverse()">1/x</button>
+
+          <!-- Dokuzuncu Satır - Bellek İşlevleri -->
+          <button class="memory" onclick="memoryStore()">MS</button>
+          <button class="memory" onclick="memoryRecall()">MR</button>
+          <button class="memory" onclick="memoryAdd()">M+</button>
+          <button class="memory" onclick="memorySubtract()">M-</button>
+
+          <!-- Onuncu Satır - Diğer İşlevler -->
+          <button class="constant" onclick="Pi()">π</button>
+          <button class="constant" onclick="E()">e</button>
+          <button class="function" onclick="Abs()">|x|</button>
+          <button class="history" onclick="showHistory()">History</button>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
