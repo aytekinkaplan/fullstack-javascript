@@ -1,0 +1,10 @@
+const firstListItem = document.querySelector("ul>li");
+firstListItem.style.backgroundColor = "blue";
+firstListItem.style.color = "white";
+const secondListItem = document.querySelectorAll("ul>li")[1];
+secondListItem.style.backgroundColor = "green";
+secondListItem.style.color = "white";
+const thirdListItem = document.querySelectorAll("ul>li")[2];
+thirdListItem.style.backgroundColor = "yellow";
+const fourthListItem = document.querySelectorAll("ul>li")[3];
+fourthListItem.style.backgroundColor = "orange";
